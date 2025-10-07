@@ -3,5 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/sia-portfolio/',   // <-- must match the repo name
+  base: '/sia-portfolio/', // <-- must match the repo name
+   publicDir: 'public',     
 })

@@ -89,7 +89,14 @@ export default function Portfolio() {
               <a href="mailto:sia.v.puthusseri.th@dartmouth.edu" className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800">Email</a>
               <a href="https://linkedin.com/in/SiaPuthusseri" target="_blank" rel="noreferrer" className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800">LinkedIn</a>
               <a href="https://github.com/Siaviji" target="_blank" rel="noreferrer" className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800">GitHub</a>
-              <a href="#" className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800">Download Résumé</a>
+              <a
+  href={`${import.meta.env.BASE_URL}resume.pdf`}
+  download
+  className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800"
+>
+  Download Résumé
+</a>
+
             </div>
           </div>
           <div className="md:justify-self-end">
