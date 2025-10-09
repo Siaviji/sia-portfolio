@@ -1,5 +1,8 @@
 import React from "react";
 
+// helper: build a safe URL to anything inside /public
+const pub = (p) => `${import.meta.env.BASE_URL}${encodeURI(p)}`;
+
 const roles = [
   {
     title: "Product Manager Intern (Platform Delivery)",
@@ -36,21 +39,44 @@ const projects = [
     tags: ["AI", "Privacy", "MVP"],
     blurb:
       "Defined problem, guardrails, and success metrics; modularized intent/tone, personalized prompts, and memory; delivered MVP in 12 weeks.",
-    link: "#",
+    link: pub("Projects & Casestudies/Endeavory AI.pdf"),
   },
   {
-    title: "Federated Learning — Security (Patent 202321056911)",
-    tags: ["Federated Learning", "Security", "Flower"],
+    title: "Energy Tech — State of Connecticut (Grid-Scale)",
+    tags: ["Energy", "GovTech", "Evaluation"],
     blurb:
-      "Horizontal FL reduced successful attacks ~30% vs baselines; authored evaluation protocol and documentation.",
-    link: "#",
+      "Concept and evaluation of grid-scale energy technology with stakeholder analysis and feasibility study.",
+    link: pub("Projects & Casestudies/Grid scale Energy technology solution for state of connecticut.pdf"),
   },
   {
-    title: "Phishing Detection using FL",
-    tags: ["TensorFlow", "TFF", "Evaluation"],
-    blurb:
-      "95% accuracy with reproducible pipeline; defined metrics and validation checks.",
-    link: "#",
+    title: "PineTrack — Product Concept",
+    tags: ["Product Discovery", "UX", "MVP"],
+    blurb: "Problem framing and MVP definition with early signals and validation path.",
+    link: pub("Projects & Casestudies/PineTrack.pdf"),
+  },
+  {
+    title: "Prefit — Case Study",
+    tags: ["UX Research", "Experimentation"],
+    blurb: "Improved conversion through structured research and experiment-driven backlog.",
+    link: pub("Projects & Casestudies/Prefit.pdf"),
+  },
+  {
+    title: "TikTok Feed — Case Study",
+    tags: ["Consumer", "Experimentation"],
+    blurb: "Hypothesis-driven iteration on feed ranking and engagement levers.",
+    link: pub("Projects & Casestudies/Tiktok Feed Case study.pdf"),
+  },
+  {
+    title: "TikTok Parental Control — Case Study",
+    tags: ["Safety", "Policy", "Consumer"],
+    blurb: "Parental control feature set proposal with policy & abuse vectors considered.",
+    link: pub("Projects & Casestudies/TikTok Parental Control Case Study.pdf"),
+  },
+  {
+    title: "TikTok Social App — Case Study",
+    tags: ["Growth", "Consumer"],
+    blurb: "Onboarding and social graph experiments to increase early retention.",
+    link: pub("Projects & Casestudies/TIKTOK Social app case study.pdf"),
   },
 ];
 
@@ -90,13 +116,12 @@ export default function Portfolio() {
               <a href="https://linkedin.com/in/SiaPuthusseri" target="_blank" rel="noreferrer" className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800">LinkedIn</a>
               <a href="https://github.com/Siaviji" target="_blank" rel="noreferrer" className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800">GitHub</a>
               <a
-  href={`${import.meta.env.BASE_URL}resume.pdf`}
-  download
-  className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800"
->
-  Download Résumé
-</a>
-
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
+                download
+                className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800"
+              >
+                Download Résumé
+              </a>
             </div>
           </div>
           <div className="md:justify-self-end">
@@ -132,7 +157,7 @@ export default function Portfolio() {
       </section>
 
       <section id="projects" className="mx-auto max-w-6xl px-4 py-10">
-        <h2 className="text-2xl md:text-3xl font-semibold">Selected Projects</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold">Selected Projects and Case Studies</h2>
         <div className="mt-6 grid md:grid-cols-3 gap-6">
           {projects.map((p, idx) => (
             <article key={idx} className="rounded-3xl border border-neutral-800 p-6 bg-neutral-900/40">
@@ -143,7 +168,14 @@ export default function Portfolio() {
                 ))}
               </div>
               <p className="mt-3 text-sm text-neutral-300">{p.blurb}</p>
-              <a href={p.link} className="mt-4 inline-block text-sm underline underline-offset-4 hover:opacity-80">Case study</a>
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 inline-block text-sm underline underline-offset-4 hover:opacity-80"
+              >
+                Case study
+              </a>
             </article>
           ))}
         </div>
@@ -160,7 +192,9 @@ export default function Portfolio() {
 
       <section id="contact" className="mx-auto max-w-6xl px-4 py-10">
         <h2 className="text-2xl md:text-3xl font-semibold">Contact</h2>
-        <p className="mt-2 text-neutral-300">Open to Product Manager/APM, Program Manager, and Project Manager roles (0–2 YOE) — NYC/NJ or Remote.</p>
+        <p className="mt-2 text-neutral-300">
+          Open to Product Manager/APM, Program Manager, and Project Manager roles (0–2 YOE) — NYC/NJ or Remote.
+        </p>
         <form className="mt-6 grid gap-3 max-w-xl" action="#" method="POST">
           <input name="name" placeholder="Your Name" className="w-full rounded-xl bg-neutral-900 border border-neutral-800 px-3 py-2" />
           <input name="email" placeholder="Your Email" type="email" className="w-full rounded-xl bg-neutral-900 border border-neutral-800 px-3 py-2" />
