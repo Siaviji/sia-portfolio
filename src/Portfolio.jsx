@@ -33,57 +33,94 @@ const roles = [
   },
 ];
 
+// Thumbnails should live in: public/thumbnails/*.png
+// PDFs live in: public/Projects & Casestudies/*.pdf
 const projects = [
+  {
+    title: "Empower Ed — Inclusive E-learning",
+  tags: ["EdTech", "Accessibility", "UX"],
+  blurb:
+    "Accessible e-learning platform for visually impaired students with screen-reader support, high-contrast UI, and Braille-friendly workflows.",
+  link: pub("Projects & Casestudies/Empower Ed.pdf"),
+  thumb: pub("thumbnails/Empower Ed.png"),
+  },
   {
     title: "Endeavory AI — Journaling Chatbot (0→1)",
     tags: ["AI", "Privacy", "MVP"],
     blurb:
       "Defined problem, guardrails, and success metrics; modularized intent/tone, personalized prompts, and memory; delivered MVP in 12 weeks.",
     link: pub("Projects & Casestudies/Endeavory AI.pdf"),
+    thumb: pub("thumbnails/Endeavory AI.png"),
   },
   {
     title: "Energy Tech — State of Connecticut (Grid-Scale)",
     tags: ["Energy", "GovTech", "Evaluation"],
     blurb:
       "Concept and evaluation of grid-scale energy technology with stakeholder analysis and feasibility study.",
-    link: pub("Projects & Casestudies/Grid scale Energy technology solution for state of connecticut.pdf"),
+    link: pub(
+      "Projects & Casestudies/Grid scale Energy technology solution for state of connecticut.pdf"
+    ),
+    thumb: pub("thumbnails/Grid scale Energy technology solution for state of connecticut.png"),
   },
   {
     title: "PineTrack — Product Concept",
     tags: ["Product Discovery", "UX", "MVP"],
-    blurb: "Problem framing and MVP definition with early signals and validation path.",
+    blurb:
+      "Problem framing and MVP definition with early signals and validation path.",
     link: pub("Projects & Casestudies/PineTrack.pdf"),
+    thumb: pub("thumbnails/PineTrack.png"),
   },
   {
-    title: "Prefit — Case Study",
+    title: "Prefit - Hackathon Project",
     tags: ["UX Research", "Experimentation"],
-    blurb: "Improved conversion through structured research and experiment-driven backlog.",
+    blurb:
+      "Improved conversion through structured research and experiment-driven backlog.",
     link: pub("Projects & Casestudies/Prefit.pdf"),
+    thumb: pub("thumbnails/Prefit.png"),
   },
   {
     title: "TikTok Feed — Case Study",
     tags: ["Consumer", "Experimentation"],
-    blurb: "Hypothesis-driven iteration on feed ranking and engagement levers.",
+    blurb:
+      "Hypothesis-driven iteration on feed ranking and engagement levers.",
     link: pub("Projects & Casestudies/Tiktok Feed Case study.pdf"),
+    thumb: pub("thumbnails/Tiktok Feed Case study.png"),
   },
   {
     title: "TikTok Parental Control — Case Study",
     tags: ["Safety", "Policy", "Consumer"],
-    blurb: "Parental control feature set proposal with policy & abuse vectors considered.",
+    blurb:
+      "Parental control feature set proposal with policy & abuse vectors considered.",
     link: pub("Projects & Casestudies/TikTok Parental Control Case Study.pdf"),
+    thumb: pub("thumbnails/TikTok Parental Control Case Study.png"),
   },
   {
     title: "TikTok Social App — Case Study",
     tags: ["Growth", "Consumer"],
-    blurb: "Onboarding and social graph experiments to increase early retention.",
+    blurb:
+      "Onboarding and social graph experiments to increase early retention.",
     link: pub("Projects & Casestudies/TIKTOK Social app case study.pdf"),
+    thumb: pub("thumbnails/TikTok Parental Control Case Study.png"),
   },
 ];
 
 const skills = [
-  "Product Strategy", "Roadmaps & Backlogs", "PRDs & Acceptance Criteria", "Program Governance",
-  "UAT/Beta Programs", "A/B Testing", "UX Research", "Python", "SQL", "Power BI", "Tableau",
-  "Confluence", "Jira", "APIs/SDKs", "DevX", "Data Standardization (SORs)",
+  "Product Strategy",
+  "Roadmaps & Backlogs",
+  "PRDs & Acceptance Criteria",
+  "Program Governance",
+  "UAT/Beta Programs",
+  "A/B Testing",
+  "UX Research",
+  "Python",
+  "SQL",
+  "Power BI",
+  "Tableau",
+  "Confluence",
+  "Jira",
+  "APIs/SDKs",
+  "DevX",
+  "Data Standardization (SORs)",
 ];
 
 export default function Portfolio() {
@@ -91,12 +128,22 @@ export default function Portfolio() {
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
       <header className="sticky top-0 backdrop-blur bg-neutral-950/70 z-50 border-b border-neutral-800">
         <nav className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-          <a href="#top" className="font-semibold tracking-tight">Sia Viji Puthusseri</a>
+          <a href="#top" className="font-semibold tracking-tight">
+            Sia Viji Puthusseri
+          </a>
           <div className="space-x-5 text-sm">
-            <a href="#work" className="hover:opacity-80">Experience</a>
-            <a href="#projects" className="hover:opacity-80">Projects</a>
-            <a href="#skills" className="hover:opacity-80">Skills</a>
-            <a href="#contact" className="hover:opacity-80">Contact</a>
+            <a href="#work" className="hover:opacity-80">
+              Experience
+            </a>
+            <a href="#projects" className="hover:opacity-80">
+              Projects
+            </a>
+            <a href="#skills" className="hover:opacity-80">
+              Skills
+            </a>
+            <a href="#contact" className="hover:opacity-80">
+              Contact
+            </a>
           </div>
         </nav>
       </header>
@@ -108,15 +155,35 @@ export default function Portfolio() {
               Product Manager — AI-first experiences & data-driven delivery
             </h1>
             <p className="mt-4 text-neutral-300">
-              Dartmouth MEM focused on platform services, technical roadmaps, and cross-functional execution.
-              I translate customer insight into PRDs, acceptance criteria, and shipped value.
+              Dartmouth MEM focused on platform services, technical roadmaps,
+              and cross-functional execution. I translate customer insight into
+              PRDs, acceptance criteria, and shipped value.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="mailto:sia.v.puthusseri.th@dartmouth.edu" className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800">Email</a>
-              <a href="https://linkedin.com/in/SiaPuthusseri" target="_blank" rel="noreferrer" className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800">LinkedIn</a>
-              <a href="https://github.com/Siaviji" target="_blank" rel="noreferrer" className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800">GitHub</a>
               <a
-                href={`${import.meta.env.BASE_URL}resume.pdf`}
+                href="mailto:sia.v.puthusseri.th@dartmouth.edu"
+                className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800"
+              >
+                Email
+              </a>
+              <a
+                href="https://linkedin.com/in/SiaPuthusseri"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/Siaviji"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800"
+              >
+                GitHub
+              </a>
+              <a
+                href={pub("resume.pdf")}
                 download
                 className="rounded-2xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800"
               >
@@ -142,14 +209,19 @@ export default function Portfolio() {
         <h2 className="text-2xl md:text-3xl font-semibold">Experience</h2>
         <div className="mt-6 grid gap-6">
           {roles.map((r, idx) => (
-            <div key={idx} className="rounded-3xl border border-neutral-800 p-6 bg-neutral-900/40">
+            <div
+              key={idx}
+              className="rounded-3xl border border-neutral-800 p-6 bg-neutral-900/40"
+            >
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="text-lg md:text-xl font-medium">{r.title}</h3>
                 <span className="text-sm text-neutral-400">{r.dates}</span>
               </div>
               <p className="mt-1 text-neutral-300">{r.company}</p>
               <ul className="mt-3 list-disc list-inside space-y-2 text-sm text-neutral-200">
-                {r.bullets.map((b, i) => (<li key={i}>{b}</li>))}
+                {r.bullets.map((b, i) => (
+                  <li key={i}>{b}</li>
+                ))}
               </ul>
             </div>
           ))}
@@ -157,25 +229,50 @@ export default function Portfolio() {
       </section>
 
       <section id="projects" className="mx-auto max-w-6xl px-4 py-10">
-        <h2 className="text-2xl md:text-3xl font-semibold">Selected Projects and Case Studies</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold">
+          Selected Projects and Case Studies
+        </h2>
         <div className="mt-6 grid md:grid-cols-3 gap-6">
           {projects.map((p, idx) => (
-            <article key={idx} className="rounded-3xl border border-neutral-800 p-6 bg-neutral-900/40">
-              <h3 className="font-medium text-lg">{p.title}</h3>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {p.tags.map((t, i) => (
-                  <span key={i} className="text-xs rounded-full border border-neutral-700 px-2 py-1 text-neutral-300">{t}</span>
-                ))}
+            <article
+              key={idx}
+              className="rounded-3xl border border-neutral-800 bg-neutral-900/40 overflow-hidden hover:bg-neutral-900 transition"
+            >
+              {/* Thumbnail */}
+              {p.thumb && (
+                <a href={p.link} target="_blank" rel="noreferrer">
+                  <img
+                    src={p.thumb}
+                    alt={`${p.title} thumbnail`}
+                    className="w-full h-44 md:h-48 object-cover object-center border-b border-neutral-800"
+                    loading="lazy"
+                  />
+                </a>
+              )}
+
+              {/* Text */}
+              <div className="p-6">
+                <h3 className="font-medium text-lg">{p.title}</h3>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {p.tags.map((t, i) => (
+                    <span
+                      key={i}
+                      className="text-xs rounded-full border border-neutral-700 px-2 py-1 text-neutral-300"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-3 text-sm text-neutral-300">{p.blurb}</p>
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-block text-sm underline underline-offset-4 hover:opacity-80"
+                >
+                  Case study
+                </a>
               </div>
-              <p className="mt-3 text-sm text-neutral-300">{p.blurb}</p>
-              <a
-                href={p.link}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-4 inline-block text-sm underline underline-offset-4 hover:opacity-80"
-              >
-                Case study
-              </a>
             </article>
           ))}
         </div>
@@ -185,7 +282,12 @@ export default function Portfolio() {
         <h2 className="text-2xl md:text-3xl font-semibold">Skills</h2>
         <div className="mt-4 flex flex-wrap gap-2">
           {skills.map((s, idx) => (
-            <span key={idx} className="rounded-full border border-neutral-700 px-3 py-1 text-sm text-neutral-300">{s}</span>
+            <span
+              key={idx}
+              className="rounded-full border border-neutral-700 px-3 py-1 text-sm text-neutral-300"
+            >
+              {s}
+            </span>
           ))}
         </div>
       </section>
@@ -193,18 +295,36 @@ export default function Portfolio() {
       <section id="contact" className="mx-auto max-w-6xl px-4 py-10">
         <h2 className="text-2xl md:text-3xl font-semibold">Contact</h2>
         <p className="mt-2 text-neutral-300">
-          Open to Product Manager/APM, Program Manager, and Project Manager roles (0–2 YOE) — NYC/NJ or Remote.
+          Open to Product Manager/APM, Program Manager, and Project Manager
+          roles (0–2 YOE) — NYC/NJ or Remote.
         </p>
         <form className="mt-6 grid gap-3 max-w-xl" action="#" method="POST">
-          <input name="name" placeholder="Your Name" className="w-full rounded-xl bg-neutral-900 border border-neutral-800 px-3 py-2" />
-          <input name="email" placeholder="Your Email" type="email" className="w-full rounded-xl bg-neutral-900 border border-neutral-800 px-3 py-2" />
-          <textarea name="message" placeholder="Message" rows={5} className="w-full rounded-xl bg-neutral-900 border border-neutral-800 px-3 py-2" />
-          <button className="justify-self-start rounded-xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800">Send</button>
+          <input
+            name="name"
+            placeholder="Your Name"
+            className="w-full rounded-xl bg-neutral-900 border border-neutral-800 px-3 py-2"
+          />
+          <input
+            name="email"
+            placeholder="Your Email"
+            type="email"
+            className="w-full rounded-xl bg-neutral-900 border border-neutral-800 px-3 py-2"
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows={5}
+            className="w-full rounded-xl bg-neutral-900 border border-neutral-800 px-3 py-2"
+          />
+          <button className="justify-self-start rounded-xl border border-neutral-700 px-4 py-2 text-sm hover:bg-neutral-800">
+            Send
+          </button>
         </form>
       </section>
 
       <footer className="mx-auto max-w-6xl px-4 py-10 text-xs text-neutral-500">
-        © {new Date().getFullYear()} Sia Viji Puthusseri — Built with React & Tailwind
+        © {new Date().getFullYear()} Sia Viji Puthusseri — Built with React &
+        Tailwind
       </footer>
     </div>
   );
