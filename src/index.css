@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ---- 3D flip helpers for the Memoji -> photo card ---- */
+.flip-card { perspective: 1000px; }
+.flip-inner { transform-style: preserve-3d; transition: transform .6s ease; }
+.flip-face { backface-visibility: hidden; }
+.flip-back { transform: rotateY(180deg); }
+.flip-card:hover .flip-inner { transform: rotateY(180deg); }
+
+/* 3D flip helpers */
+.perspective-1000 { perspective: 1000px; }
+.preserve-3d { transform-style: preserve-3d; }
+.backface-hidden { backface-visibility: hidden; }
